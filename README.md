@@ -1,1 +1,1 @@
-Teamwork for printf project
+First team project on C printf
