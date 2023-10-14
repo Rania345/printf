@@ -15,8 +15,10 @@ The available datatypes to be displayed are:
 - %X: Prints the hexadecimal representation of an unsigned decimal in uppercase letters
 - %r: Prints a reversed string
 - %R: Prints the Rot13 interpretation of a string Usage
-
-
+<br> </br>
+## Project Objective
+#### ___Create your own printf function.___
+<br> </br>
 ## Requirements
 - All the files are to be compiled on Ubuntu 14.04 LTS Compile your code with gcc -Wall -Werror -Wextra -pedantic
 - All your files should end with a new line
@@ -26,4 +28,4 @@ The available datatypes to be displayed are:
 - The prototypes of all your functions should be included in your header file called main.h
 
 ## Authors
-Rania Tariek & Hossam Mahmoud
+___Rania Tariek & Hossam Mahmoud___
