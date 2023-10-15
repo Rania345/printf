@@ -17,7 +17,7 @@ The available datatypes to be displayed are:
 - %R: Prints the Rot13 interpretation of a string Usage
 <br> </br>
 ## Project Objective
-#### ___Create your own printf function.___
+#### ___Create your own printf function___
 <br> </br>
 ## Requirements
 - All the files are to be compiled on Ubuntu 14.04 LTS Compile your code with gcc -Wall -Werror -Wextra -pedantic
