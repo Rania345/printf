@@ -28,4 +28,4 @@ The available datatypes to be displayed are:
 - The prototypes of all your functions should be included in your header file called main.h
 
 ## Authors
-___Rania Tariek & Hossam Mahmoud___
+___Rania Triek & Hossam Mahmoud___
