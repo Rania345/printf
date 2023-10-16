@@ -14,11 +14,13 @@
  *
  */
 
-typedef struct format
+typedef void (*PrintfHandler)(va_list* args);
+
+typedef struct
 {
-	char *id;
-	int (*f)();
-} convert_match;
+	char *specifier;
+	PrintfHandler handler;
+} PrintfSpecifier;
 
 int printf_pointer(va_list val);
 int printf_hex_aux(unsigned long int num);
