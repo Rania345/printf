@@ -5,45 +5,63 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <limits.h>
-#include <unistd.h>
 
+
+/**
+ * struct flags - struct containing flags to "turn on"
+ * when a flag specifier is passed to _printf()
+ *
+ * @plus: flag for the '+' character
+ * @space: flag for the ' ' character
+ * @hash: flag for the '#' character
+ *
+ */
+typedef struct
+{
+	int plus;
+	int space;
+	int hash;
+} flags_t;
 
 
 /**
  * struct format - match the conversion specifiers for printf
+ *
  * @id: type char pointer of the specifier i.e (l, h) for (d, i, u, o, x, X)
  * @f: type pointer to function for the conversion specifier
  *
  */
+typedef struct {
+	char specifier;
+	int (*f)(va_list argPointer, flags_t *f);
+} SpecifierHandler;
 
-typedef struct format
-{
-	char *id;
-	int (*f)();
-} convert_match;
 
-int printf_pointer(va_list val);
-int printf_hex_aux(unsigned long int num);
-int printf_HEX_aux(unsigned int num);
-int printf_exclusive_string(va_list val);
-int printf_HEX(va_list val);
-int printf_hex(va_list val);
-int printf_oct(va_list val);
-int printf_unsigned(va_list args);
-int printf_bin(va_list val);
-int printf_srev(va_list args);
-int printf_rot13(va_list args);
-int printf_int(va_list args);
-int printf_dec(va_list args);
-int _strlen(char *s);
-int *_strcpy(char *dest, char *src);
-int _strlenc(const char *s);
-int rev_string(char *s);
-int _strlenc(const char *s);
-int printf_37(void);
-int printf_char(va_list val);
-int printf_string(va_list val);
 int _putchar(char c);
-int _printf(const char *format, ...);
+int print_char(va_list arg, flags_t* f);
+int print_string(va_list arg, flags_t* f);
+
+int print_int(va_list arg, flags_t* f);
+int print_decimal(va_list arg, flags_t* f);
+void print_number(int input);
+int count_digit(int input);
+
+int print_binary(va_list arg, flags_t* f);
+int print_hex(va_list arg, flags_t* f);
+int print_hexa(va_list arg, flags_t* f);
+int print_octa(va_list arg, flags_t* f);
+
+int print_rev(va_list arg, flags_t* f);
+int print_exclusiveS(va_list arg, flags_t* f);
+int print_percent(va_list arg, flags_t* f);
+int print_rot13(va_list arg, flags_t* f);
+
+int print_pointer(va_list arg, flags_t* f);
+int print_unsigned(va_list arg, flags_t* f);
+
+int get_flag(char symbol, flags_t* f);
+char* convert(unsigned long int number, int base, int lowercase);
+int (*get_specifier(char symbol))(va_list, flags_t*);
+int _printf(const char* format, ...);
 
 #endif
