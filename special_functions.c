@@ -9,11 +9,11 @@
  *
  * Return: result string
  */
-char* convert(unsigned long int number, int base, int lowercase)
+char *convert(unsigned long int number, int base, int lowercase)
 {
-	static char* rep;
+	static char *rep;
 	static char buffer[50];
-	char* ptr;
+	char *ptr;
 
 	rep = (lowercase)
 		? "0123456789abcdef"

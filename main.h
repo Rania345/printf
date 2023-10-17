@@ -8,7 +8,7 @@
 
 
 /**
- * struct flags - struct containing flags to "turn on"
+ * struct flags_t - struct containing flags to "turn on"
  * when a flag specifier is passed to _printf()
  *
  * @plus: flag for the '+' character
@@ -25,7 +25,7 @@ typedef struct
 
 
 /**
- * struct format - match the conversion specifiers for printf
+ * struct SpecifierHandler - match the conversion specifiers for printf
  *
  * @id: type char pointer of the specifier i.e (l, h) for (d, i, u, o, x, X)
  * @f: type pointer to function for the conversion specifier
@@ -61,7 +61,7 @@ int print_pointer(va_list arg, flags_t *f);
 int print_unsigned(va_list arg, flags_t *f);
 
 int get_flag(char symbol, flags_t *f);
-char* convert(unsigned long int number, int base, int lowercase);
+char *convert(unsigned long int number, int base, int lowercase);
 int (*get_specifier(char symbol))(va_list, flags_t *);
 int _printf(const char *format, ...);
 

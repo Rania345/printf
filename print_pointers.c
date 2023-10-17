@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_address - prints address of input in hexa format
+ * print_pointer - prints address of input in hexa format
  *
  * @arg: va_list arguments from _printf
  * @f: pointer to the struct flags that determines

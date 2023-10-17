@@ -74,11 +74,10 @@ int print_hexa(va_list arg, flags_t *f)
 
 
 /**
- * print_octal - prints a number in base 8
+ * print_octa - prints a number in base 8
  *
  * @arg: va_list arguments from _printf
  * @f: pointer to the struct that determines
- * if a flag is passed to _printf
  *
  * Description: the function calls convert() which in turns converts the input
  * number into the correct base and returns it as a string

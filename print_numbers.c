@@ -26,7 +26,7 @@ int print_int(va_list arg, flags_t *f)
 }
 
 /**
- * print_int - prints an integer
+ * print_decimal - prints an integer
  *
  * @arg: va_list of arguments from _printf
  * @f: pointer to the struct flags determining
@@ -60,7 +60,7 @@ int print_decimal(va_list arg, flags_t *f)
 int print_unsigned(va_list arg, flags_t *f)
 {
 	unsigned int u = va_arg(arg, unsigned int);
-	char* str = convert(u, 10, 0);
+	char *str = convert(u, 10, 0);
 
 	(void)f;
 

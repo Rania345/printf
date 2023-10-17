@@ -1,15 +1,13 @@
 #include "main.h"
 
 /**
- * get_print - selects the appropriate function based on
+ * get_specifier - selects the appropriate function based on
  * the conversion specifier passed to _printf
  *
  * @symbol: Conversion specifier parameter
  *
  * Description: Function loops through the array of structs
  * func_arr[] to find a match between the specifier passed to _printf
- * and the first element of the struct, and then the approriate
- * printing function
  *
  * Return: a pointer to the matching printing function
  */
@@ -56,7 +54,7 @@ int (*get_specifier(char symbol))(va_list, flags_t*)
  *
  * Return: 1 if a flag has been turned on, 0 otherwise
  */
-int get_flag(char symbol, flags_t* f)
+int get_flag(char symbol, flags_t *f)
 {
 	int i = 0;
 
