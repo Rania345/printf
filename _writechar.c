@@ -34,7 +34,7 @@ int _putchar(char c)
  *
  * Return: number of chars written
  */
-int _puts(char* str)
+int _puts(char *str)
 {
 	register int i;
 
@@ -54,7 +54,7 @@ int _puts(char* str)
  *
  * Return: number of char printed
  */
-int print_char(va_list arg, flags_t* f)
+int print_char(va_list arg, flags_t *f)
 {
 	(void)f;
 	_putchar(va_arg(arg, int));
@@ -71,11 +71,11 @@ int print_char(va_list arg, flags_t* f)
  *
  * Return: number of char printed
  */
-int print_string(va_list arg, flags_t* f)
+int print_string(va_list arg, flags_t *f)
 {
 	(void)f;
 
-	char* str = va_arg(arg, char*);
+	char *str = va_arg(arg, char*);
 
 	if (!str)
 		str = "(null)";
