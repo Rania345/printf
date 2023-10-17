@@ -5,10 +5,10 @@
  * @format: identifier to look for.
  * Return: the length of the string.
  */
-int _printf(const char * format, ...)
+int _printf(const char *format, ...)
 {
 	int (*pointerFunc)(va_list, flags_t*);
-	const char* ptr;
+	const char *ptr;
 	va_list arguments;
 
 	flags_t flags = { 0, 0, 0 };

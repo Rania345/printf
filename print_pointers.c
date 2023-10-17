@@ -9,9 +9,9 @@
  *
  * Return: number of char printed
  */
-int print_pointer(va_list arg, flags_t* f)
+int print_pointer(va_list arg, flags_t *f)
 {
-	char* str;
+	char *str;
 	unsigned long int ptr = va_arg(arg, unsigned long int);
 
 	register int count = 0;

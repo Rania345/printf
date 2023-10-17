@@ -11,11 +11,11 @@
  * if a flag is passed to _printf
  * Return: number of char printed
  */
-int print_exclusiveS(va_list arg, flags_t* f)
+int print_exclusiveS(va_list arg, flags_t *f)
 {
 	int i, count = 0;
-	char* result;
-	char* str = va_arg(arg, char*);
+	char *result;
+	char *str = va_arg(arg, char*);
 
 	(void)f;
 
@@ -51,10 +51,10 @@ int print_exclusiveS(va_list arg, flags_t* f)
  *
  * Return: length of the printed string
  */
-int print_rev(va_list arg, flags_t* f)
+int print_rev(va_list arg, flags_t *f)
 {
 	int i = 0, j;
-	char* str = va_arg(arg, char*);
+	char *str = va_arg(arg, char*);
 
 	(void)f;
 
@@ -78,12 +78,12 @@ int print_rev(va_list arg, flags_t* f)
  *
  * Return: length of the printed string
  */
-int print_rot13(va_list arg, flags_t* f)
+int print_rot13(va_list arg, flags_t *f)
 {
 	int i, j;
 	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	char* str = va_arg(arg, char*);
+	char *str = va_arg(arg, char*);
 
 	(void)f;
 
@@ -112,7 +112,7 @@ int print_rot13(va_list arg, flags_t* f)
  *
  * Return: number of char printed
  */
-int print_percent(va_list arg, flags_t* f)
+int print_percent(va_list arg, flags_t *f)
 {
 	(void)arg;
 	(void)f;

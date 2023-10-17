@@ -12,10 +12,10 @@
  *
  * Return: INT the number of char printed
  */
-int print_binary(va_list arg, flags_t* f)
+int print_binary(va_list arg, flags_t *f)
 {
 	unsigned int num = va_arg(arg, unsigned int);
-	char* str = convert(num, 2, 0);
+	char *str = convert(num, 2, 0);
 
 	(void)f;
 
@@ -35,10 +35,10 @@ int print_binary(va_list arg, flags_t* f)
  *
  * Return: the number of char printed
  */
-int print_hex(va_list arg, flags_t* f)
+int print_hex(va_list arg, flags_t *f)
 {
 	unsigned int num = va_arg(arg, unsigned int);
-	char* str = convert(num, 16, 1);
+	char *str = convert(num, 16, 1);
 	int count = 0;
 
 	if (f->hash == 1 && str[0] != '0')
@@ -60,10 +60,10 @@ int print_hex(va_list arg, flags_t* f)
  *
  * Return: the number of char printed
  */
-int print_hexa(va_list arg, flags_t* f)
+int print_hexa(va_list arg, flags_t *f)
 {
 	unsigned int num = va_arg(arg, unsigned int);
-	char* str = convert(num, 16, 0);
+	char *str = convert(num, 16, 0);
 	int count = 0;
 
 	if (f->hash == 1 && str[0] != '0')
@@ -85,10 +85,10 @@ int print_hexa(va_list arg, flags_t* f)
  *
  * Return: the number of char printed
  */
-int print_octa(va_list arg, flags_t* f)
+int print_octa(va_list arg, flags_t *f)
 {
 	unsigned int num = va_arg(arg, unsigned int);
-	char* str = convert(num, 8, 0);
+	char *str = convert(num, 8, 0);
 	int count = 0;
 
 	if (f->hash == 1 && str[0] != '0')

@@ -31,37 +31,38 @@ typedef struct
  * @f: type pointer to function for the conversion specifier
  *
  */
-typedef struct {
+typedef struct
+{
 	char specifier;
 	int (*f)(va_list argPointer, flags_t *f);
 } SpecifierHandler;
 
 
 int _putchar(char c);
-int print_char(va_list arg, flags_t* f);
-int print_string(va_list arg, flags_t* f);
+int print_char(va_list arg, flags_t *f);
+int print_string(va_list arg, flags_t *f);
 
-int print_int(va_list arg, flags_t* f);
-int print_decimal(va_list arg, flags_t* f);
+int print_int(va_list arg, flags_t *f);
+int print_decimal(va_list arg, flags_t *f);
 void print_number(int input);
 int count_digit(int input);
 
-int print_binary(va_list arg, flags_t* f);
-int print_hex(va_list arg, flags_t* f);
-int print_hexa(va_list arg, flags_t* f);
-int print_octa(va_list arg, flags_t* f);
+int print_binary(va_list arg, flags_t *f);
+int print_hex(va_list arg, flags_t *f);
+int print_hexa(va_list arg, flags_t *f);
+int print_octa(va_list arg, flags_t *f);
 
-int print_rev(va_list arg, flags_t* f);
-int print_exclusiveS(va_list arg, flags_t* f);
-int print_percent(va_list arg, flags_t* f);
-int print_rot13(va_list arg, flags_t* f);
+int print_rev(va_list arg, flags_t *f);
+int print_exclusiveS(va_list arg, flags_t *f);
+int print_percent(va_list arg, flags_t *f);
+int print_rot13(va_list arg, flags_t *f);
 
-int print_pointer(va_list arg, flags_t* f);
-int print_unsigned(va_list arg, flags_t* f);
+int print_pointer(va_list arg, flags_t *f);
+int print_unsigned(va_list arg, flags_t *f);
 
-int get_flag(char symbol, flags_t* f);
+int get_flag(char symbol, flags_t *f);
 char* convert(unsigned long int number, int base, int lowercase);
-int (*get_specifier(char symbol))(va_list, flags_t*);
-int _printf(const char* format, ...);
+int (*get_specifier(char symbol))(va_list, flags_t *);
+int _printf(const char *format, ...);
 
 #endif
