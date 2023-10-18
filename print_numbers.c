@@ -12,7 +12,7 @@ void printf_dec(int number)
 	if (!num)
 		return;
 
-	printf_dec_aux(number / 10);
+	printf_dec(number / 10);
 
 	_putchar((number % 10) + '0');
 }
@@ -50,7 +50,7 @@ int printf_decimal(va_list arg)
 		digit_count++;
 	}
 
-	printf_dec_aux(number);
+	printf_dec(number);
 
 	return (digit_count);
 }
@@ -64,5 +64,5 @@ int printf_decimal(va_list arg)
  */
 int printf_int(va_list arg)
 {
-	return (printf_dec(arg));
+	return (printf_decimal(arg));
 }

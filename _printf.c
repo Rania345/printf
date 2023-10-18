@@ -16,7 +16,7 @@ int (*formatter(const char *buffer, int *index))()
 	SpecifierHandler handlerSymbols[] = {
 		{"c", printf_char},
 		{"s", printf_string},
-		{"d", printf_dec},
+		{"d", printf_decimal},
 		{"i", printf_int}
 	};
 

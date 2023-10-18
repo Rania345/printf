@@ -24,8 +24,9 @@ typedef struct handler
 
 
 int _putchar(char c);
-int print_char(va_list arg);
-int print_string(va_list arg);
+int _puts(char *str);
+int printf_char(va_list arg);
+int printf_string(va_list arg);
 
 void printf_dec(int number);
 int printf_int(va_list arg);
