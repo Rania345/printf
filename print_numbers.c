@@ -9,7 +9,7 @@
  */
 void printf_dec(int number)
 {
-	if (!num)
+	if (!number)
 		return;
 
 	printf_dec(number / 10);

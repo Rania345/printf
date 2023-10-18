@@ -30,12 +30,12 @@ int (*formatter(const char *buffer, int *index))()
 		temp_index = *index;
 		j = 0;
 
-		while (buffer[temp_index] && handlerSymbols[symbolsLength].flag[j]
-				&& buffer[temp_index] == handlerSymbols[symbolsLength].flag[j])
+		while (buffer[temp_index] && handlerSymbols[symbolsLength].specifier[j]
+				&& buffer[temp_index] == handlerSymbols[symbolsLength].specifier[j])
 			++temp_index, ++j;
 
 		/* current flag in format_dic matched */
-		if (!handlerSymbols[symbolsLength].flag[j])
+		if (!handlerSymbols[symbolsLength].specifier[j])
 			break;
 	}
 	/* no flag in format_dic matched */
@@ -45,7 +45,7 @@ int (*formatter(const char *buffer, int *index))()
 	/* move idx to point on char after format */
 	*index = temp_index;
 
-	return (handlerSymbols[symbolsLength].formatter);
+	return (handlerSymbols[symbolsLength].functionPointer);
 }
 
 
@@ -115,7 +115,7 @@ int _printf(const char *format, ...)
 				continue;
 			}
 
-			written += format_printf(args);
+			written += format_printf(argPointer);
 		}
 		else		/* case of chars in buffer */
 		{
@@ -123,7 +123,7 @@ int _printf(const char *format, ...)
 			++written;
 		}
 	}
-	va_end(args);
+	va_end(argPointer);
 
 	return (written);
 }
