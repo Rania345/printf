@@ -35,7 +35,7 @@ typedef struct flag
  */
 typedef struct handler
 {
-	char specifier;
+	char *specifier;
 	int (*f)(va_list argPointer, flags_t *f);
 } SpecifierHandler;
 
