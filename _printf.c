@@ -17,7 +17,7 @@ int (*formatter(const char *buffer, int *index))()
 		{"c", printf_char},
 		{"s", printf_string},
 		{"d", printf_decimal},
-		{"i", printf_int}
+		{"i", printf_decimal}
 	};
 
 	int symbolsLength = 4;		/* lenght of format_dic */
