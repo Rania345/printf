@@ -53,12 +53,9 @@ int printf_char(va_list arg)
 int printf_string(va_list arg)
 {
 	char *str = va_arg(arg, char *);
-	int i = 0;
 
-	while (str[i] != '\0')
-	{
-		_putchar(str[i]);
-		i++;
-	}
-	return (i);
+	if (!str)
+		str = "(null)";
+
+	return (_puts(str));
 }
